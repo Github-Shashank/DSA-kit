@@ -51,7 +51,7 @@ class LinkedList
     void pop_back();
 
     // Reverse
-    // void reverse();
+    void reverse();
 
     // Utility
     void clear();
@@ -68,6 +68,6 @@ class LinkedList
 template <typename T>
 std::ostream& operator<<(std::ostream&, const dsa::LinkedList<T>&);
 
-#include "dsa/linked_list.tpp"
+#include "./linked_list.tpp"
 
 #endif 

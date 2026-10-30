@@ -209,11 +209,23 @@ void dsa::LinkedList<T>::pop_back()
 }
 
 
-// template <typename T>
-// void dsa::LinkedList<T>::reverse(void)
-// {
+template <typename T>
+void dsa::LinkedList<T>::reverse(void)
+{
+    Node *prev = nullptr;
+    Node *curr = head_;
+    tail_ = head_;
+ 
+    while(curr != nullptr)
+    {
+        Node *next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
 
-// }
+    head_ = prev;
+}
 
 
 template <typename T>
